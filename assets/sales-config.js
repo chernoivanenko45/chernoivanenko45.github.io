@@ -1,6 +1,5 @@
 window.UNIQUEFLOW_SALES = Object.freeze({
   environment: "sandbox",
-  publicCheckoutEnabled: false,
   paddleClientToken: "test_e06823a5360144a218ec9355d78",
   paddleMonthlyPriceId: "pri_01m02zm3fck955ks9esebgrwy0",
   paddleLifetimePriceId: "pri_01m02zm41cntpgzs22kjddxj2m",

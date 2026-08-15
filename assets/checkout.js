@@ -81,20 +81,6 @@
     localStorage.removeItem("uf_order_claim_token");
     localStorage.removeItem("uf_order_claim_hash");
     const buttons = document.querySelectorAll("[data-buy-button]");
-    if (config.publicCheckoutEnabled !== true) {
-      buttons.forEach((button) => {
-        button.disabled = true;
-        button.title = currentLocale() === "ru"
-          ? "Приём оплат откроется после проверки Paddle"
-          : "Checkout will open after Paddle verification";
-      });
-      setCheckoutState(
-        currentLocale() === "ru"
-          ? "Сайт готов к продажам. Приём оплат откроется сразу после проверки Paddle."
-          : "The site is ready for sales. Checkout will open as soon as Paddle verification is complete.",
-      );
-      return;
-    }
     if (!paddleConfigured()) {
       buttons.forEach((button) => {
         button.disabled = true;
